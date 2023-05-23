@@ -17,7 +17,7 @@
 
 
         <TextView
-            android:id="@+id/textView_title_todo"
+            android:id="@+id/textView_name_animal"
             style="@style/TextAppearance.MaterialComponents.Headline5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
             tools:text="TextView" />
 
         <TextView
-            android:id="@+id/textView_description_todo"
+            android:id="@+id/textView_species_animal"
             style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -41,18 +41,18 @@
             android:text="@{viewModel.species}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_title_todo"
+            app:layout_constraintTop_toBottomOf="@+id/textView_name_animal"
             tools:text="TextView" />
 
         <TextView
-            android:id="@+id/textView_category_todo"
+            android:id="@+id/textView_habitat_animal"
             style="@style/TextAppearance.AppCompat.Body2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@{viewModel.habitat}"
-            app:layout_constraintStart_toStartOf="@+id/textView_description_todo"
-            app:layout_constraintTop_toBottomOf="@+id/textView_description_todo"
+            app:layout_constraintStart_toStartOf="@+id/textView_species_animal"
+            app:layout_constraintTop_toBottomOf="@+id/textView_species_animal"
             tools:text="TextView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

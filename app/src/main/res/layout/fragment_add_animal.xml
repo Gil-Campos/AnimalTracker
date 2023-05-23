@@ -29,7 +29,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textField_layout_title"
+            android:id="@+id/textField_layout_name_animal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/small_margin"
@@ -41,7 +41,7 @@
             app:layout_constraintTop_toBottomOf="@id/textView_title_fragment">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textfield_input_title"
+                android:id="@+id/textfield_input_name_animal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@={viewModel.name}" />
@@ -49,17 +49,17 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textField_layout_description"
+            android:id="@+id/textField_layout_species_animal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_margin"
             android:hint="@string/animal_species"
-            app:layout_constraintEnd_toEndOf="@+id/textField_layout_title"
-            app:layout_constraintStart_toStartOf="@+id/textField_layout_title"
-            app:layout_constraintTop_toBottomOf="@id/textField_layout_title">
+            app:layout_constraintEnd_toEndOf="@+id/textField_layout_name_animal"
+            app:layout_constraintStart_toStartOf="@+id/textField_layout_name_animal"
+            app:layout_constraintTop_toBottomOf="@id/textField_layout_name_animal">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textfield_input_description"
+                android:id="@+id/textfield_input_species_animal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@={viewModel.species}" />
@@ -67,17 +67,17 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textField_layout_category"
+            android:id="@+id/textField_layout_habitat_animal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_margin"
             android:hint="@string/animal_habitat"
-            app:layout_constraintEnd_toEndOf="@+id/textField_layout_title"
-            app:layout_constraintStart_toStartOf="@+id/textField_layout_title"
-            app:layout_constraintTop_toBottomOf="@id/textField_layout_description">
+            app:layout_constraintEnd_toEndOf="@+id/textField_layout_name_animal"
+            app:layout_constraintStart_toStartOf="@+id/textField_layout_name_animal"
+            app:layout_constraintTop_toBottomOf="@id/textField_layout_species_animal">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textfield_input_category"
+                android:id="@+id/textfield_input_habitat_animal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@={viewModel.habitat}" />
@@ -93,7 +93,7 @@
             android:text="@string/add_animal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textField_layout_category" />
+            app:layout_constraintTop_toBottomOf="@+id/textField_layout_habitat_animal" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
