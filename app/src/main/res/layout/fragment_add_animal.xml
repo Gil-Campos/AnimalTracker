@@ -1,0 +1,89 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.gilcampos.animaltracker.ui.tracker.add.AddAnimalFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView_title_fragment"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="@string/add_new_animal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField_layout_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/x_big_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:hint="@string/animal_name_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_title_fragment">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textfield_input_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField_layout_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:hint="@string/animal_species"
+            app:layout_constraintEnd_toEndOf="@+id/textField_layout_title"
+            app:layout_constraintStart_toStartOf="@+id/textField_layout_title"
+            app:layout_constraintTop_toBottomOf="@id/textField_layout_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textfield_input_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField_layout_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:hint="@string/animal_habitat"
+            app:layout_constraintEnd_toEndOf="@+id/textField_layout_title"
+            app:layout_constraintStart_toStartOf="@+id/textField_layout_title"
+            app:layout_constraintTop_toBottomOf="@id/textField_layout_description">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textfield_input_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_add_listItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x_big_margin"
+            android:text="@string/add_animal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textField_layout_category" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

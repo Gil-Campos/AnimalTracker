@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/animalListFragment">
+
+    <fragment
+        android:id="@+id/addAnimalFragment"
+        android:name="com.gilcampos.animaltracker.ui.tracker.add.AddAnimalFragment"
+        android:label="fragment_add_animal"
+        tools:layout="@layout/fragment_add_animal" >
+        <action
+            android:id="@+id/action_addAnimalFragment_to_animalListFragment"
+            app:destination="@id/animalListFragment"
+            app:popUpTo="@id/animalListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/animalDetailsFragment"
+        android:name="com.gilcampos.animaltracker.ui.tracker.display.AnimalDetailsFragment"
+        android:label="fragment_animal_details"
+        tools:layout="@layout/fragment_animal_details" />
+    <fragment
+        android:id="@+id/animalListFragment"
+        android:name="com.gilcampos.animaltracker.ui.tracker.list.AnimalListFragment"
+        android:label="fragment_animal_list"
+        tools:layout="@layout/fragment_animal_list" >
+        <action
+            android:id="@+id/action_animalListFragment_to_addAnimalFragment"
+            app:destination="@id/addAnimalFragment" />
+        <action
+            android:id="@+id/action_animalListFragment_to_animalDetailsFragment"
+            app:destination="@id/animalDetailsFragment" />
+    </fragment>
+</navigation>
